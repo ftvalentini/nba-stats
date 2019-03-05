@@ -3,8 +3,7 @@ source("libraries.R")
 # concatenate strings
 "%+%" = function(a,b) paste(a,b,sep="")
 
-year_inicio=1991
-# read regular season teams data from play index according to query
+# read regular season teams data from play index according to query for a single season
 get_rs = function(year_inicio) {
   year = year_inicio + 1
   root = "https://www.basketball-reference.com/play-index/tsl_finder.cgi?"

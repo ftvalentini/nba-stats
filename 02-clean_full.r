@@ -8,7 +8,7 @@ po = readRDS("data/working/po.rds")
 
 # clean -------------------------------------------------------------------
 
-# append y preprocess
+# append and preprocess
 full = list("Regular season"=rs, "Playoffs"=po) %>% bind_rows(.id="stage") %>% 
   mutate(
     pos_per_48 = pace,

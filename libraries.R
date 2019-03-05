@@ -1,6 +1,7 @@
 
-# escribir paquetes "desiempre" y "proj" ---------------------------------------
-# las desiempre no se llaman explicitamente en los Scripts, las proj sí
+# packages "desiempre" y "proj" ---------------------------------------
+# desiempre do not have to be explicitely called
+# proj have to be explicitely called
 paq_desiempre <- c(
   "magrittr",
   "purrr",
@@ -21,7 +22,7 @@ paq_proj <- c(
   "RCurl"
 )
 
-# no tocar ----------------------------------------------------------------
+# not touch ----------------------------------------------------------------
 paq <- c(paq_desiempre,paq_proj)
 for (i in seq_along(paq)) {
   if (!(paq[i] %in% installed.packages()[,1])) {

@@ -7,7 +7,7 @@ source("functions.R")
 base = readRDS("data/working/full.rds")
 
 
-# resumen -----------------------------------------------------------------
+# summary data -----------------------------------------------------------------
 
 res = base %>% select(season, team_id, stage,
                        pts_per_48, pts_per_pos, pos_per_48,
@@ -58,6 +58,8 @@ plotfunc = function(statlab) {
     geom_point() +
     theme_minimal() +
     scale_x_continuous(breaks=seq(1980,2019,5), minor_breaks=seq(1980,2019,1)) +
+    scale_color_manual(values=c("forestgreen","goldenrod3")) +
+    scale_fill_manual(values=c("forestgreen","goldenrod3")) +
     theme(
       strip.text=element_text(face="bold", size=11),
       legend.title=element_blank(),
